@@ -110,11 +110,6 @@ Dự án này tập trung vào việc **so sánh hiệu suất các thuật toá
 
 ---
 
-## 💻 Demo
-
-<img src="demo.gif" width="500" alt="Demo chạy 8-Puzzle AI">
-
----
 
 ## 📊 Tổng Kết
 
@@ -125,7 +120,7 @@ Dự án này tập trung vào việc **so sánh hiệu suất các thuật toá
 
 ## 📬 Liên hệ
 
-Mọi góp ý xin gửi về: **tranthinh...@gmail.com**
+Mọi góp ý xin gửi về: **ttnquynh20@gmail.com**
 
 ---
 
