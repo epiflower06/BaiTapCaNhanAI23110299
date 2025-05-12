@@ -48,6 +48,7 @@ Dự án này tập trung vào việc **so sánh hiệu suất các thuật toá
 #### Breadth-First Search (BFS)
 - Duyệt theo từng lớp.
 - Đảm bảo tìm được lời giải tối ưu nếu chi phí đồng đều.
+📎 [Xem đoạn code Breadth-First Search (BFS)](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L249-L262)
 
 #### Depth-First Search (DFS)
 - Duyệt theo chiều sâu.
