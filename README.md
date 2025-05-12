@@ -37,7 +37,17 @@
 
 ## 🧠 Giới Thiệu
 
-Dự án này tập trung vào việc **so sánh hiệu suất các thuật toán tìm kiếm** trong Trí Tuệ Nhân Tạo thông qua **bài toán 8-Puzzle**. Các thuật toán được triển khai kèm giao diện mô phỏng quá trình giải từng bước.
+Dự án này tập trung vào việc cài đặt và so sánh hiệu suất của các thuật toán tìm kiếm trong trí tuệ nhân tạo, sử dụng bài toán 8-Puzzle làm trường hợp thử nghiệm. Bài toán 8-Puzzle là một trò chơi đơn giản nhưng hiệu quả để minh họa nguyên lý hoạt động của các thuật toán tìm kiếm.
+
+Các thuật toán được triển khai trong dự án này được phân thành 6 nhóm chính:
+
+- **Thuật toán tìm kiếm mù (Uninformed Search)**
+- **Thuật toán tìm kiếm có thông tin (Informed Search)**
+- **Thuật toán leo đồi và biến thể, di truyền (Local Search)**
+- **Thuật toán dựa trên ràng buộc (CSPs)**
+- **Thuật toán tìm kiếm trong môi trường phức tạp (Complex Environment)**
+- **Thuật toán học tăng cường (Reinforcement Learning)**
+Dự án cung cấp một giao diện trực quan, cho phép người dùng theo dõi quá trình tìm kiếm lời giải theo từng bước, giúp hiểu rõ hơn về cơ chế hoạt động của mỗi thuật toán.
 
 ---
 
@@ -46,46 +56,59 @@ Dự án này tập trung vào việc **so sánh hiệu suất các thuật toá
 ### 1. Nhóm thuật toán Uninformed Search
 
 #### Breadth-First Search (BFS)
-- Duyệt theo từng lớp.
-- Đảm bảo tìm được lời giải tối ưu nếu chi phí đồng đều.
+- **Cách hoạt động:** Khám phá không gian trạng thái theo chiều rộng, mở rộng toàn bộ nút ở độ sâu hiện tại trước khi tiếp tục.
+- **Ưu điểm:** Đảm bảo tìm được đường đi ngắn nhất nếu chi phí bước đồng nhất.
+- **Nhược điểm:** Tiêu tốn rất nhiều bộ nhớ.
+- **Độ phức tạp:**  
+  - Thời gian: O(b^d)  
+  - Không gian: O(b^d)
 📎 [Xem đoạn code Breadth-First Search (BFS)](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L249-L262)
 
 #### Depth-First Search (DFS)
-- Duyệt theo chiều sâu.
-- Không đảm bảo tìm được lời giải tối ưu.
-  
-#### Iterative Deepening DFS
+- **Cách hoạt động:** Khám phá sâu theo nhánh cho đến cùng rồi quay lui.
+- **Ưu điểm:** Tiết kiệm bộ nhớ hơn BFS.
+- **Nhược điểm:** Không đảm bảo tìm đường ngắn nhất, có thể rơi vào vòng lặp vô hạn.
+- **Độ phức tạp:**  
+  - Thời gian: O(b^m)  
+  - Không gian: O(b*m)
+📎 [Xem đoạn code Depth-First Search (DFS)](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L264-L279)
+#### Iterative Deepening 
 - Kết hợp ưu điểm DFS và BFS.
-  
+📎 [Xem đoạn code Iterative Deepening ]
 #### Uniform Cost Search
 - Tìm đường đi chi phí thấp nhất.
 
-
+📎 [Xem đoạn code Uniform Cost Search]
 
 ### 2. Nhóm thuật toán Informed Search
 
 #### Greedy Search
 - Chọn nút có chi phí ước lượng nhỏ nhất.
-📎 [`informed_search.py`](./path/to/informed_search.py)
-
+📎 [Xem đoạn code Greedy Search]
 #### A* Search
 - Kết hợp chi phí thực và ước lượng (g + h).
-📎 [`informed_search.py`](./path/to/informed_search.py)
+📎 [Xem đoạn code A* Search]
 
 #### IDA* Search
 - Kết hợp A* với DFS theo độ sâu tăng dần.
-📎 [`informed_search.py`](./path/to/informed_search.py)
+📎 [Xem đoạn code IDA* Search]
 
 ---
 
 ### 3. Nhóm thuật toán Local Search
 
 #### Simple Hill Climbing
+📎 [Xem đoạn code Simple Hill Climbing]
 #### Steepest Hill Climbing
+📎 [Xem đoạn code Steepest Hill Climbing]
 #### Beam Search
+📎 [Xem đoạn code Beam Search]
 #### Stochastic Hill Climbing
+📎 [Xem đoạn code Stochastic Hill Climbing]
 #### Simulated Annealing
+📎 [Xem đoạn code Simulated Annealing]
 #### Genetic Algorithm
+📎 [Xem đoạn code Genetic Algorithm]
 
 
 
@@ -93,20 +116,21 @@ Dự án này tập trung vào việc **so sánh hiệu suất các thuật toá
 
 #### Backtracking Search
 
-📎 Xem code: [`csp_solver.py`](./path/to/csp_solver.py)
+📎 [Xem đoạn code Backtracking Search]
 
 ### 5. Nhóm thuật toán tìm kiếm môi trường phức tạp
 
 #### Sensorless BFS
+📎 [Xem đoạn code Sensorless BFS]
 #### AND-OR Search
+📎 [Xem đoạn code  AND-OR Search]
 
-📎 Xem code: [`complex_env_search.py`](./path/to/complex_env_search.py)
 
 ### 6. Nhóm thuật toán Học tăng cường (Reinforcement Learning)
 
 #### Q-Learning
 
-📎 Xem code: [`q_learning.py`](./path/to/q_learning.py)
+📎 [Xem đoạn code Q-Learning]
 
 ---
 
