@@ -758,23 +758,33 @@ def and_or_search(belief, goal, visited=None, depth=0, max_depth=100):
 
 # ================= NHÓM THUẬT TOÁN CSP======================== 
 # ---------------------Backtracking Search --------------------
-def backtracking_search(state, goal, visited=None, path=None):
+def backtracking_search(state, goal, visited=None, path=None, depth=0, depth_limit=100):
     if visited is None:
         visited = set()
     if path is None:
         path = []
-    if state == goal:
+    # Kiểm tra định dạng trạng thái
+    if not (isinstance(state, list) and len(state) == 3 and
+            all(isinstance(row, list) and len(row) == 3 for row in state)):
+        return []
+    # Nếu đạt trạng thái đích, trả về đường đi
+    if is_equal(state, goal):
         return path + [state]
-    ser = tuple(tuple(row) for row in state)
-    visited.add(ser)
-    for nxt in successors(state):  # Duyệt các trạng thái kế tiếp hợp lệ
-        nxt_ser = tuple(tuple(row) for row in nxt)
-        if nxt_ser in visited:
-            continue
-        res = backtracking_search(nxt, goal, visited, path + [state])
-        if res is not None:
-            return res
-    return None
+    # Nếu vượt quá độ sâu, trả về rỗng
+    if depth >= depth_limit:
+        return []
+    # Chuyển trạng thái thành tuple để băm
+    state_tuple = tuple(tuple(row) for row in state)
+    if state_tuple in visited:
+        return []
+    # Đánh dấu trạng thái hiện tại là đã thăm trong nhánh này
+    visited.add(state_tuple)
+    # Thử các trạng thái kế tiếp
+    for next_state in successors(state):
+        result = backtracking_search(next_state, goal, visited.copy(), path + [state], depth + 1, depth_limit)
+        if result:
+            return result
+    return []  # Không tìm thấy giải pháp
 
 # ================= NHÓM THUẬT TOÁN Reinforcement Learning==================
 # -----------------Q-Learning Agent ------------------
