@@ -49,7 +49,8 @@ Các thuật toán được triển khai trong dự án này được phân thà
 - **Thuật toán học tăng cường (Reinforcement Learning)**
 
 Giao diện trực quan của dự án được thiết kế để người dùng có thể theo dõi từng bước giải bài toán, qua đó nắm bắt sâu sắc cách thức hoạt động của các thuật toán này.
-
+- **Giao diện chính của bài toán 8 Puzzle**
+![Giao diện](giaodien.png)
 ---
 
 ## 📚 Các thuật toán tìm kiếm
@@ -63,6 +64,9 @@ Giao diện trực quan của dự án được thiết kế để người dùn
 - **Độ phức tạp:**  
   - Thời gian: O(b^d)  
   - Không gian: O(b^d)
+    
+   ![BFS](BFS.gif)
+  
 📎 [Xem đoạn code Breadth-First Search (BFS)](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L249-L262)
 
 #### Depth-First Search (DFS)
@@ -72,14 +76,21 @@ Giao diện trực quan của dự án được thiết kế để người dùn
 - **Độ phức tạp:**  
   - Thời gian: O(b^m)  
   - Không gian: O(b*m)
+
+ ![DFS](DFS.gif)
+    
 📎 [Xem đoạn code Depth-First Search (DFS)](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L264-L279)
 #### Iterative Deepening 
 - **Ưu điểm:**
 - **Nhược điểm:**
+
+  ![ID](IterativeDeepening.gif)
+
 📎 [Xem đoạn code Iterative Deepening ](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L298-L317)
 #### Uniform Cost Search
 - **Ưu điểm:**
 - **Nhược điểm:**
+  ![UCS](UCS.gif)
 
 📎 [Xem đoạn code Uniform Cost Search](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L281-L295)
 
@@ -88,21 +99,23 @@ Giao diện trực quan của dự án được thiết kế để người dùn
 #### Greedy Search
 - **Ưu điểm:**
 - **Nhược điểm:**
+  ![Greedy Search](GreedySearch.gif)
   
 📎 [Xem đoạn code Greedy Search](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L335-L349)
 #### A* Search
 - **Ưu điểm:**
 - **Nhược điểm:**
+  ![A*](A_star.gif)
   
 📎 [Xem đoạn code A* Search](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L351-L365)
 
 #### IDA* Search
 - **Ưu điểm:**
 - **Nhược điểm:**
-- 
+  ![IDA*](IDA_star.gif)
+  
 📎 [Xem đoạn code IDA* Search](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L367-L391)
 
----
 
 ### 3. Nhóm thuật toán Local Search
 Nhóm thuật toán Local Search bao gồm các phương pháp tìm kiếm giải pháp trong không gian tìm kiếm bằng cách cải thiện dần dần một giải pháp hiện tại. Các thuật toán trong nhóm này thường được sử dụng cho các bài toán tối ưu hóa, nơi mà việc tìm kiếm toàn bộ không gian giải pháp là không khả thi. Dưới đây là một số thuật toán tiêu biểu trong nhóm này:
@@ -114,16 +127,20 @@ Simple Hill Climbing là một thuật toán tìm kiếm đơn giản, trong đ�
 - **Nhược điểm:**
 - Dễ bị mắc kẹt trong các cực tiểu cục bộ.
 - Không đảm bảo tìm được giải pháp tối ưu toàn cục.
+  ![Simple Hill Climbing](SimpleHC.gif)
+  
 📎 [Xem đoạn code Simple Hill Climbing](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L395-L422)
-#### Steepest Hill Climbing
-Steepest Hill Climbing là một biến thể của thuật toán Simple Hill Climbing, trong đó nó chọn giải pháp tốt nhất trong số các giải pháp lân cận.
+#### Steepest Ascent Hill Climbing
+Steepest Ascent Hill Climbing là một biến thể của thuật toán Simple Hill Climbing, trong đó nó chọn giải pháp tốt nhất trong số các giải pháp lân cận.
 - **Ưu điểm:**
 - Tăng khả năng tìm kiếm giải pháp tối ưu hơn so với Simple Hill Climbing.
 - Có thể tìm ra giải pháp tốt hơn trong một số trường hợp.
 - **Nhược điểm:**
 - Thời gian tính toán có thể lâu hơn do phải đánh giá tất cả các giải pháp lân cận.
 - Có thể mắc kẹt trong các cực tiểu cục bộ.
-📎 [Xem đoạn code Steepest Hill Climbing](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L425-L451)
+  ![Steepest Ascent Hill Climbing](SteepestAscentHC.gif)
+
+📎 [Xem đoạn code Steepest Ascent Hill Climbing](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L425-L451)
 #### Beam Search
 Beam Search là một thuật toán tìm kiếm có giới hạn, trong đó nó giữ lại một số lượng nhất định các giải pháp tốt nhất tại mỗi bước.
 - **Ưu điểm:**
@@ -132,6 +149,8 @@ Beam Search là một thuật toán tìm kiếm có giới hạn, trong đó nó
 - **Nhược điểm:**
 - Có thể bỏ lỡ các giải pháp tốt hơn nằm ngoài phạm vi beam.
 - Kết quả phụ thuộc vào kích thước của beam.
+  ![Beam](BeamSearch.gif)
+  
 📎 [Xem đoạn code Beam Search](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L479-L512)
 #### Stochastic Hill Climbing
 Stochastic Hill Climbing là một biến thể của thuật toán Hill Climbing, trong đó nó chọn ngẫu nhiên một giải pháp lân cận để di chuyển đến.
@@ -141,6 +160,8 @@ Stochastic Hill Climbing là một biến thể của thuật toán Hill Climbin
 - **Nhược điểm:**
 - Kết quả có thể không ổn định do tính ngẫu nhiên.
 - Thời gian tính toán có thể dài hơn so với các thuật toán xác định.
+  ![Stochastic Hill Climbing](StochasticHC.gif)
+  
 📎 [Xem đoạn code Stochastic Hill Climbing](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L454-L476)
 #### Simulated Annealing
 Simulated Annealing là một thuật toán tối ưu hóa dựa trên nguyên lý của quá trình làm nguội kim loại.
@@ -150,6 +171,8 @@ Simulated Annealing là một thuật toán tối ưu hóa dựa trên nguyên l
 - **Nhược điểm:**
 - Thời gian tính toán có thể dài, đặc biệt nếu không điều chỉnh đúng các tham số.
 - Cần phải thiết lập các tham số như nhiệt độ và tốc độ làm nguội một cách hợp lý.
+ ![Simulated Annealing](SimulatedAnnealing.gif)
+  
 📎 [Xem đoạn code Simulated Annealing](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L515-L540)
 #### Genetic Algorithm
 Genetic Algorithm là một thuật toán tối ưu hóa dựa trên nguyên lý chọn lọc tự nhiên. Nó sử dụng các cá thể (giải pháp) trong một quần thể và áp dụng các phép lai ghép, đột biến để tạo ra các thế hệ mới.
@@ -161,6 +184,8 @@ Genetic Algorithm là một thuật toán tối ưu hóa dựa trên nguyên lý
 - Thời gian tính toán có thể lâu do cần nhiều thế hệ để đạt được kết quả tốt.
 - Kết quả có thể không ổn định và phụ thuộc vào các tham số như tỷ lệ đột biến và tỷ lệ lai ghép.
 - Cần thiết lập các tham số một cách hợp lý để đạt hiệu quả tối ưu.
+ ![Genetic Algorithm](GeneticAlgorithm.gif)
+  
 📎 [Xem đoạn code Genetic Algorithm](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L602-L639)
 
 ### 4. Nhóm thuật toán CSPs - Ràng buộc
@@ -173,12 +198,16 @@ Backtracking Search là một thuật toán tìm kiếm có hệ thống, trong 
 - **Nhược điểm:**
 - Thời gian tính toán có thể rất lâu cho các bài toán lớn do số lượng khả năng tăng theo cấp số nhân.
 - Có thể bị mắc kẹt trong các nhánh không khả thi mà không có cách nào để loại bỏ sớm.
+ ![Backtracking Search](Backtracking.gif)
+  
 📎 [Xem đoạn code Backtracking Search](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L761-L787)
 
 ### 5. Nhóm thuật toán tìm kiếm môi trường phức tạp
 Nhóm thuật toán tìm kiếm môi trường phức tạp tập trung vào việc giải quyết các bài toán trong các môi trường không chắc chắn hoặc không đầy đủ thông tin. Các thuật toán trong nhóm này thường được sử dụng trong các ứng dụng như robot tự hành, trò chơi và các hệ thống thông minh.
 #### Sensorless BFS
 Sensorless BFS (Breadth-First Search) là một thuật toán tìm kiếm trong đó không có thông tin cảm biến về trạng thái hiện tại của môi trường. Thuật toán này khám phá tất cả các trạng thái khả thi từ một trạng thái ban đầu mà không cần biết chính xác vị trí hiện tại.
+ ![Sensorless BFS](SensorlessBFS.gif)
+
 📎 [Xem đoạn code Sensorless BFS](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L655-L704)
 #### AND-OR Search
 AND-OR Search là một thuật toán tìm kiếm được sử dụng để giải quyết các bài toán có cấu trúc phức tạp, trong đó các quyết định có thể dẫn đến nhiều nhánh khác nhau. Thuật toán này sử dụng cấu trúc cây để phân tích các lựa chọn và tìm kiếm giải pháp.
@@ -188,6 +217,8 @@ AND-OR Search là một thuật toán tìm kiếm được sử dụng để gi�
 - **Nhược điểm:**
 - Cần nhiều tài nguyên tính toán và bộ nhớ để lưu trữ cấu trúc cây.
 - Có thể khó triển khai và tối ưu hóa cho các bài toán lớn.
+ ![AND-OR Search](AND_OR.gif)
+  
 📎 [Xem đoạn code  AND-OR Search](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L708-L757)
 
 
@@ -202,6 +233,7 @@ Q-Learning là một thuật toán học tăng cường không cần mô hình, 
 - Thời gian học có thể dài, đặc biệt trong các môi trường phức tạp với nhiều trạng thái và hành động.
 - Cần một lượng lớn dữ liệu để đạt được hiệu suất tốt.
 - Có thể không hội tụ đến chính sách tối ưu nếu không điều chỉnh đúng các tham số như tốc độ học.
+ ![Q-Learning](Q_learning.gif)
 
 📎 [Xem đoạn code Q-Learning](https://github.com/epiflower06/BaiTapCaNhanAI23110299/blob/main/23110299_TranThiNhuQuynh_baitapcanhanAI.py#L824-L914)
 
